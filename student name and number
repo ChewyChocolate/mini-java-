@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Student{
+    String fName;
+    String lName;
+    String sNo;
+    Student(String a, String b, String c){
+        fName = a;
+        lName = b;
+        sNo = c;
+    }
+    void showInfo(){
+        System.out.println("Student Name: " + fName + ' ' + lName);
+        System.out.println("Student No: " + sNo);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Student student = new Student("Christian Earl", "De Guzman", "001");
+        student.showInfo();
+    }
+}
