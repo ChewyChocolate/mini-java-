@@ -18,7 +18,9 @@ class Student{
 class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Student student = new Student("Christian Earl", "De Guzman", "001");
-        student.showInfo();
+        Student student1 = new Student("Christian Earl", "De Guzman", "001");
+        Student student2 = new Student("Shalie", "Manaois", "002");
+        student1.showInfo();
+        student2.showInfo();
     }
 }
