@@ -6,10 +6,10 @@ class Student {
     String lName;
     String sNo;
 
-    Student(String a, String b, String c) {
-        fName = a;
-        lName = b;
-        sNo = c;
+    Student(String fName, String lName, String sNo) {
+        this.fName = fName;
+        this.lName = lName;
+        this.sNo = sNo;
     }
 
     void showInfo() {
