@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Student {
@@ -20,23 +21,24 @@ class Student {
 class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Student[] student = new Student[5];
-        
-        for(int i = 0; i < 5; i++){
+        ArrayList<Student> students = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
             System.out.print("Enter First Name: ");
             String firstName = scan.nextLine();
-            
+
             System.out.print("Enter Last Name: ");
             String lastName = scan.nextLine();
 
             System.out.print("Enter Student Number: ");
             String studentNumber = scan.nextLine();
-            
+
             System.out.print("\033[H\033[2J");
-            student[i] = new Student(firstName, lastName, studentNumber);
+            students.add(new Student(firstName, lastName, studentNumber));
         }
-        for(int i = 0; i < 5; i++){
-            student[i].showInfo();
+
+        for (Student student : students) {
+            student.showInfo();
             System.out.println();
         }
     }
