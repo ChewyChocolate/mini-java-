@@ -22,8 +22,9 @@ class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         ArrayList<Student> students = new ArrayList<>();
-
-        for (int i = 0; i < 5; i++) {
+        boolean cond = true;
+        
+        while(cond) {
             System.out.print("Enter First Name: ");
             String firstName = scan.nextLine();
 
@@ -35,6 +36,13 @@ class Main {
 
             System.out.print("\033[H\033[2J");
             students.add(new Student(firstName, lastName, studentNumber));
+            
+            System.out.println("Do you want to register another student?");
+            String response = scan.nextLine();
+            System.out.print("\033[H\033[2J");
+            if(!response.equals("yes")){
+                cond = false;
+            }
         }
 
         for (Student student : students) {
